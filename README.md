@@ -208,10 +208,10 @@ $paytabs->get_transactions_reports("14-08-2015","22-08-2015");
 ```
 >This API call will post all transactions that have taken place within the specified time interval to a URL. Before calling this API, you will need to set the listener URL for the reports. Login to your merchant dashboard and edit your profile. In the ‘IPN Listener for Transactions Reports Enter the URL where you would like PayTabs to post your transactions and click on Save. Once you call the transaction_reports API, all the transactions will be posted to the listener URL and the response will be contain the number of transactions that will be posted.
 
-The return of this call will be 
-- transaction_result: number of transaction 
+The return of this call will be:
+- transaction_result: number of transaction
 - response_code
 Note that the date should be in the following format: dd-mm-YYYY
 
 Other improvements to the class will be added soon, to stay updated with the project you can watch it on [GitHub](https://github.com/plusmnt/PayTabs).
-You can find more information about the size of each variable and dummy credit card number in the [original documentation](https://www.paytabs.com/PayTabs-API-Documentation-V-2.1.pdf)
+You can find more information about the size of each variable and dummy credit card number in the [original documentation](https://www.paytabs.com/PayTabs-API-Documentation-V-2.1.pdf).
