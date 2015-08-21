@@ -14,7 +14,7 @@
 		-page_language: the language of the payment page
 	
 	*/
-	$paytabs->add_page_setting('title','ref number','BHD','127.0.0.1','English');
+	$paytabs->set_page_setting('title','ref number','BHD','127.0.0.1','English');
 
 	/*
 		-customer first name
@@ -24,7 +24,7 @@
 		-customer email
 
 	*/
-	$paytabs->add_customer('Muhsan','Taher','00973','12345678','mnt@plusmnt.com');
+	$paytabs->set_customer('Muhsan','Taher','00973','12345678','mnt@plusmnt.com');
 	/*
 		-Item name
 		-item price in the same currency set in paytabs_config.php file
@@ -37,12 +37,12 @@
 		add extra charges
 	*/
 
-	$paytabs->add_other_charges(3);
+	$paytabs->set_other_charges(3);
 
 	/*
 		add discount 
 	*/
-	$paytabs->add_discount(1);
+	$paytabs->set_discount(1);
 
 	/*
 		-customer address
@@ -51,7 +51,7 @@
 		-customer postal code
 		-customer country 
 	*/
-	$paytabs->add_address("Flat 3021 Manama Bahrain","Manama","Manama","12345","BHR");
+	$paytabs->set_address("Flat 3021 Manama Bahrain","Manama","Manama","12345","BHR");
 	
 
 	/*
@@ -63,7 +63,7 @@
 		-customer postal code
 		-customer country 
 	*/
-	$paytabs->add_shipping_address("Flat 01 Manama Bahrain","Manama","ABC","4321","BHR");
+	$paytabs->set_shipping_address("Flat 01 Manama Bahrain","Manama","ABC","4321","BHR");
 
 	/*
 		return value:

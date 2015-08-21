@@ -230,17 +230,17 @@ class PayTabs
 
 	}
 	/* 
-		add_other_charges function will add extra charges to the order 
+		set_other_charges function will add extra charges to the order 
 	*/
-	public function add_other_charges($charges)
+	public function set_other_charges($charges)
 	{
 		$this->other_charges=$charges;
 	}
 
 	/*
-		add_discount function will add discount to the order, the value of discount should be positive number
+		set_discount function will add discount to the order, the value of discount should be positive number
 	*/
-	public function add_discount($discount)
+	public function set_discount($discount)
 	{
 		$this->discount=$discount;
 	}
@@ -257,11 +257,11 @@ class PayTabs
 		return($this->curl('create_pay_page'));
 	}
 	/*
-		add_address function will set the user address, this is important since paytabs verify credit card number with user address.
+		set_address function will set the user address, this is important since paytabs verify credit card number with user address.
 		this function will set the shipping address and billing address.
 	*/
 
-	public function add_address($billing_address, $state, $city, $postal_code, $country)
+	public function set_address($billing_address, $state, $city, $postal_code, $country)
 	{
 		$this->billing_address=$billing_address;
 		$this->state=$state;
@@ -278,9 +278,9 @@ class PayTabs
 		$this->country_shipping=$country;
 	}
 	/*
-		add_shipping_address will change the shipping address only in case it is different than the billing address
+		set_shipping_address will change the shipping address only in case it is different than the billing address
 	*/
-	public function add_shipping_address($billing_address, $state, $city, $postal_code, $country)
+	public function set_shipping_address($billing_address, $state, $city, $postal_code, $country)
 	{
 
 		$this->address_shipping=$billing_address;
@@ -290,13 +290,13 @@ class PayTabs
 		$this->country_shipping=$country;
 	}
 	/*
-		add_customer function will set the customer info,	
+		set_customer function will set the customer info,	
 			- First Name
 			- Last name
 			- International phone code for his country e.g. 00973
 			- Customer email 
 	*/
-	public function add_customer($fname,$lname,$int_phone,$phone,$email)
+	public function set_customer($fname,$lname,$int_phone,$phone,$email)
 	{
 		$this->cc_first_name =$fname;
 		$this->cc_last_name = $lname;
@@ -305,13 +305,13 @@ class PayTabs
 		$this->email = $email;
 	}
 	/*
-		add_page_setting, this function will set page setting and get some information about the customer
+		set_page_setting, this function will set page setting and get some information about the customer
 			- title :Description or title of the transaction done by the customer
 			- reference_no: number from your system to track the transaction 
 			- ip_cutomer: customer IP address
 			- msg_lang: the  language of the page
 	*/
-	public function add_page_setting($title,$reference_no,$currency,$ip_customer,$msg_lang)
+	public function set_page_setting($title,$reference_no,$currency,$ip_customer,$msg_lang)
 	{
 		$this->title = $title;
 		$this->reference_no = $reference_no;
