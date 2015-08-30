@@ -24,7 +24,7 @@
 		-customer email
 
 	*/
-	$paytabs->set_customer('Muhsan','Taher','00973','12345678','mnt@plusmnt.com');
+	$paytabs->set_customer('Muhsan','Taher','00973','12345678','customer@email.com');
 	/*
 		-Item name
 		-item price in the same currency set in paytabs_config.php file
