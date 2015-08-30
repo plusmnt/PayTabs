@@ -74,7 +74,7 @@ Validate function will take the email and the secret key from the configuration 
 		-customer email
 
 	*/
-	$paytabs->set_customer('Muhsan','Taher','00973','12345678','mnt@plusmnt.com');
+	$paytabs->set_customer('Muhsan','Taher','00973','12345678','customer@email.com');
 	/*
 		-Item name
 		-item price in the same currency set in paytabs_config.php file
@@ -136,7 +136,7 @@ This will set the page setting, the parameters are:
 - The payment page language
 
 ```php
-$paytabs->set_customer('Muhsan','Taher','00973','12345678','mnt@plusmnt.com');
+$paytabs->set_customer('Muhsan','Taher','00973','12345678','customer@email.com');
 ```
 set_customer function will set the customer information as the following:
 - First name
