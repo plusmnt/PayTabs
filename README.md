@@ -1,4 +1,4 @@
-###PHP API Documentation 
+### PHP API Documentation 
 
 First download the API and extra the zip file, you will get the following files:
 - [Curl.php](https://github.com/php-curl-class/php-curl-class): class to make connection with PayTabs server.
@@ -7,7 +7,7 @@ First download the API and extra the zip file, you will get the following files:
 - ex_1_verify_info.php: example for verifying the email and secret key.
 - ex_2_create_pay_page.php:An example of how to create payment page.
 
-#####Setup
+##### Setup
 Start with paytabs_config.php where you should set API options.
 
 ```php
@@ -31,7 +31,7 @@ return array(
 	$_SERVER['SERVER_ADDR'];
 ```
 
-#####Verify setting
+##### Verify setting
 
 After setting the value in paytabs_config.php file, you can try the first example to check if the email and the secret key are valid, also to check if you can make connection with PayTabs server.
 
@@ -48,7 +48,7 @@ First, you have to include PayTabs class, then create a new PHP object of the cl
 Validate function will take the email and the secret key from the configuration file and try to test the data from PayTabs server, if the return value is "Valid" everything should be OK otherwise you need to check the email and the secret key in paytabs_config.php file.
 
 
-#####Create pay page
+##### Create pay page
 ```php
 
 	require 'PayTabs.php';
@@ -190,7 +190,7 @@ Finally, calling create_pay_page will return an array with the following values:
 - p_id: payment reference from PayTabs system
 >When you create a PayPage, you will receive p_id in the response. When the customer completes a payment and is referred back to your website, there is a payment_reference that is sent with a POST method. The payment_reference is used to verify the status of the payment whether it is a successful transaction or a failed transaction. Additionally, you can compare the payment_reference and the p_id, in order to match the payment with its respective PayPage.
 
-#####Verify Payment
+##### Verify Payment
 ```php
 $paytabs->verify_payment($payment_reference);
 ```
